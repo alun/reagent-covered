@@ -12,7 +12,8 @@
         :build "test"
         :paths {:karma "./node_modules/.bin/karma --port 9881 --no-colors"}
         :alias {:default [:chrome]}
-       }
+        :coverage {:packages ["calendar"]
+                   :reporter {:check {:global {:statements 100}}}}}
   :cljsbuild {:builds [{:id           "prod"
                         :source-paths ["src"]
                         :compiler     {:main app.main
@@ -34,16 +35,13 @@
                         :compiler   {:output-to "out/testable.js"
                                      :main calendar.main-test
                                      :optimizations :none
-                                     :coverage
                                      :pretty-print true
-                                     {:packages ["calendar"]}
                                      }}
                        ]}
-  :profiles {:dev {:dependencies
+  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.8"]
+                                  [com.cemerick/piggieback "0.2.1"]
+                                  ]
                    :figwheel { :nrepl-port 7888 }
-                   [[figwheel-sidecar "0.5.8"]
-                    [com.cemerick/piggieback "0.2.1"]
-                    ]
                    :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
                    :plugins [[lein-figwheel "0.5.8"]]
                    }})
