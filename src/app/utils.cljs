@@ -1,4 +1,4 @@
-(ns calendar.utils)
+(ns app.utils)
 
 (defn rand-num
   ([amp suff]

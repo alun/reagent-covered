@@ -1,8 +1,8 @@
-(ns calendar.utils-test
+(ns app.utils-test
   (:require
-    [calendar.utils :as utils]
     [cljs.test :refer-macros [deftest is testing]]
     [clj-di.test :refer-macros [with-reset]]
+    [app.utils :as utils]
     ))
 
 (deftest rand-num
@@ -10,7 +10,7 @@
     (let [r (utils/rand-num 100)]
       (is (number? r))
       ))
-  (testing "with suffix"
+  (testing "with a suffix"
     (let [r (utils/rand-num 100 "px")]
       (is (.endsWith r "px"))
       ))

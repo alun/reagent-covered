@@ -1,8 +1,7 @@
-(defproject calendar "0.1.0-SNAPSHOT"
+(defproject reagent-covered "1.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.293"]
-                 [reagent "0.6.0" #_:exclusions #_[cljsjs/react]]
-                 #_[cljsjs/react-with-addons "0.14.7-0"]
+                 [reagent "0.6.0"]
                  [clj-di "0.5.0"]]
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-doo "0.1.7"]
@@ -12,11 +11,11 @@
         :build "test"
         :paths {:karma "./node_modules/.bin/karma --port 9881 --no-colors"}
         :alias {:default [:chrome]}
-        :coverage {:packages ["calendar"]
-                   :reporter {:check {:global {:statements 100}}}}}
+        :coverage {:packages ["app"]
+                   :reporter {:check {:global {:statements 95}}}}}
   :cljsbuild {:builds [{:id           "prod"
                         :source-paths ["src"]
-                        :compiler     {:main app.main
+                        :compiler     {:main bootstrap.main
                                        :output-to "prod/main.js"
                                        :output-dir "prod"
                                        :optimizations :advanced
@@ -24,7 +23,7 @@
                         {:id           "dev"
                         :source-paths ["src"]
                         :figwheel     true
-                        :compiler     {:main app.main
+                        :compiler     {:main bootstrap.main
                                        :output-to "out/main.js"
                                        :output-dir "out"
                                        :optimizations :none
@@ -33,7 +32,7 @@
                        {:id          "test"
                         :source-paths ["src" "test"]
                         :compiler   {:output-to "out/testable.js"
-                                     :main calendar.main-test
+                                     :main starter.doo
                                      :optimizations :none
                                      :pretty-print true
                                      }}
