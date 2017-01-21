@@ -5,7 +5,11 @@
                  [clj-di "0.5.0"]]
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-doo "0.1.7"]
-            ]
+            [katlex/github-cdn "0.1.4"]]
+  :github-cdn {:dir "dist"
+               :repository "git@github.com:katlex/reagent-covered"
+               :branch "gh-pages"
+               }
   :clean-targets [:target-path "out"]
   :doo {:debug true
         :build "test"

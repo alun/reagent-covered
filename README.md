@@ -1,10 +1,11 @@
 # Reagent covered
 
 A bare bones ClojureScript project which has:
+
 1. [Reagent][Reagent] as a UI building tool
-2. [Figwheel][Figwheel] for rapid development cycle
-3. Tests made with [cljs.test][Cljs-Testing] and run with [doo][Doo]
-4. [Instanbul][Instanbul] code coverage reports
+1. [Figwheel][Figwheel] for rapid development cycle
+1. Tests made with [cljs.test][Cljs-Testing] and run with [doo][Doo]
+1. [Instanbul][Instanbul] code coverage reports
 
 ## Prerequisites
 
