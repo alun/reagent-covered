@@ -1,0 +1,6 @@
+deployment:
+  production:
+    branch: production
+    commands:
+      - ./dist.sh
+      - ./publish.sh
