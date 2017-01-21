@@ -1,5 +1,7 @@
 # Reagent covered
 
+![Build status][CircleCI-Status]
+
 A bare bones ClojureScript project which has:
 
 1. [Reagent][Reagent] as a UI building tool
@@ -35,6 +37,6 @@ Open http://localhost:9898 save any file application gets rebuilt incrementally 
 [Instanbul]: https://github.com/gotwarlost/istanbul
 [Lein]: https://leiningen.org/
 [Npm]: https://www.npmjs.com/
-
+[CircleCI-Status]:  https://circleci.com/gh/katlex/reagent-covered.png?style=shield
 
 
