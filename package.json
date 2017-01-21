@@ -18,7 +18,7 @@
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "test": "lein doo"
+    "test": "lein doo once"
   },
   "author": "Aleksei Lunacharskii",
   "license": "ISC"
