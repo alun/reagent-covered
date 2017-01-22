@@ -19,8 +19,8 @@
     (.setAttribute (->camel-case (name k)) value)))
 
 (defn load
-  [k garden-css]
-  (let [base64 (->base64 (css garden-css))
+  [k & garden-css]
+  (let [base64 (->base64 (apply css garden-css))
         href (str "data:text/css;base64," base64)
         head (first (by-name "head"))
         link (-> (elem "link")

@@ -7,8 +7,14 @@
             [cljsjs.codemirror]
             [cljsjs.codemirror.mode.clojure]))
 
-(css/load ::css
-          [[:.editor]])
+(css/load ::styles
+          {:vendors ["webkit", "moz"]}
+          [:.editor {:border [[:1px :solid :black]]
+                     :width :800px}
+           ^:prefix {:box-shadow [[:10px :10px :12px :-8px "rgba(0, 0, 0, 0.75)"]]}
+           ]
+          [:.file {:color :#ddd}]
+          )
 
 (defn ->id
   [path]
@@ -39,7 +45,9 @@
 (defn coverage-link
   [path]
   (when (and (s/ends-with? path ".cljs")     ;; show coverage link only for
-             (not (re-find #"_test" path)))  ;; non test clojurescript
+             (not (re-find #"_test" path))   ;; non test clojurescript
+             (not (re-find #"main\." path))  ;; non main bootstrap fild
+             )
     (let [link (->> (s/split path "/")
                     (drop 1)                 ;; drop src/ and test/
                     (concat ["coverage"])    ;; add coverage prefix
