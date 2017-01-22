@@ -1,0 +1,11 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./dist.sh
+      - ./publish.sh
