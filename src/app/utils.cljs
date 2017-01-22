@@ -1,4 +1,6 @@
-(ns app.utils)
+(ns app.utils
+  (:import goog.crypt.base64)
+  )
 
 (defn rand-num
   ([amp suff]
@@ -26,3 +28,14 @@
 
 (defn log [& args]
   (.apply (.-log js/console) js/console (clj->js args)))
+
+(defn ->camel-case
+  "Converts kebab case to camel case"
+  [v]
+  (clojure.string/replace v #"-(\w)"
+                          #(clojure.string/upper-case (second %))))
+
+(defn ->base64
+  "Converts value to base64"
+  [value]
+  (js/goog.crypt.base64.encodeString value))
