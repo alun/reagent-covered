@@ -6,13 +6,6 @@
     [app.utils :as utils]
     ))
 
-(deftest update-elem
-  (testing "updates"
-    (let [elem (.createElement js/document "div")]
-      (view/update-elem elem)
-      (is (boolean (re-find #"color-1" (.-className elem))))
-      )))
-
 (deftest it-renders
   (let [container (utils/create-lazy-container "test")]
     (r/render-component [view/component] container)

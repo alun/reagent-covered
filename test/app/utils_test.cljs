@@ -47,3 +47,9 @@
     (doseq [c [r g b]]
       (is (number? (js/parseInt c)))
       )))
+
+(deftest ->camel-case
+  (is (=
+    (utils/->camel-case "some-thing--here")
+    "someThing-Here")))
+

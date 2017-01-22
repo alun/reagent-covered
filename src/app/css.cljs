@@ -23,12 +23,10 @@
   (let [base64 (->base64 (css garden-css))
         href (str "data:text/css;base64," base64)
         head (first (by-name "head"))
-        link (->
-               (elem "link")
+        link (-> (elem "link")
                (attr :type "text/css")
                (attr :rel "stylesheet")
-               (attr :href href)
-               )
+               (attr :href href))
         ]
     (when-let [old-link (k @elements)]
       (.removeChild head old-link))
