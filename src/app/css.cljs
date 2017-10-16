@@ -22,14 +22,14 @@
   [k & garden-css]
   (let [base64 (->base64 (apply css garden-css))
         href (str "data:text/css;base64," base64)
-        head (first (by-name "head"))
+        parent (first (by-name "body"))
         link (-> (elem "link")
                (attr :type "text/css")
                (attr :rel "stylesheet")
                (attr :href href))
         ]
     (when-let [old-link (k @elements)]
-      (.removeChild head old-link))
+      (.removeChild parent old-link))
     (swap! elements assoc k link)
-    (.appendChild head link)
+    (.appendChild parent link)
     ))

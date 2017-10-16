@@ -26,8 +26,8 @@
   (into []
         (map relativize)
         (concat
-          (fs/find-files "src" #".*\.cljs?$")
-          (fs/find-files "test" #".*\.cljs?$")
+          (fs/find-files "src" #"[^#]*\.cljs?$")
+          (fs/find-files "test" #"[^#]*\.cljs?$")
           )))
 
 (defn ->name-content

@@ -20,7 +20,7 @@
         :build "test"
         :paths {:karma "./node_modules/.bin/karma --port 9881 --no-colors"}
         :alias {:default [:chrome]}
-        :coverage {:packages ["app"]
+        :coverage {:packages ['app]
                    :reporter {:check {:global {:statements 95}
                                       :each {:statements 95}}}}}
   :cljsbuild {:builds [{:id           "prod"

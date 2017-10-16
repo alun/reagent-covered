@@ -10,10 +10,10 @@
 (css/load ::styles
           {:vendors ["webkit", "moz"]}
           [:.editor {:border [[:1px :solid :black]]
-                     :width :800px}
-           ^:prefix {:box-shadow [[:10px :10px :12px :-8px "rgba(0, 0, 0, 0.75)"]]}
-           ]
+                     :width :100%}
+           ^:prefix {:box-shadow [[:10px :10px :12px :-8px "rgba(0, 0, 0, 0.75)"]]}]
           [:.file {:color :#ddd}]
+          [:.CodeMirror {:height :auto}]
           )
 
 (defn ->id
@@ -32,7 +32,11 @@
                                    :mode "clojure"
                                    :lineNumbers true
                                    :readOnly true})
-                         ))))
+                         ))
+    (let [height (-> (.-editor this)
+                     .getGutterElement
+                     .-clientHeight)]
+      (.log js/console height))))
 
 (def editor
   (with-meta
