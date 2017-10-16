@@ -1,13 +1,12 @@
 #!/bin/sh
 
-set +e
+set -e
 
 lein cljsbuild once prod
 rm -rf dist
 mkdir dist
 cp prod.html dist/index.html
 mkdir dist/assets
-cp -R ace-builds dist/assets
 cp prod/main.js dist/assets
 mkdir dist/coverage
 cp -R coverage/*/* dist/coverage
