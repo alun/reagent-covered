@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">93.02% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>25/25</span>
+        <span class='fraction'>40/43</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">75% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/4</span>
+        <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">93.02% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>25/25</span>
+        <span class='fraction'>40/43</span>
       </div>
     </div>
   </div>
@@ -81,7 +81,36 @@
 36
 37
 38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -107,6 +136,26 @@
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -117,6 +166,15 @@
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Compiled by ClojureScript 1.9.293 {}
@@ -135,20 +193,40 @@ app.css.by_name = (function app$css$by_name(name){
 return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,Array.from(document.getElementsByTagName(name)));
 });
 app.css.attr = (function app$css$attr(elem,k,value){
-var G__8508 = elem;
-G__8508.setAttribute(app.utils.__GT_camel_case.call(null,cljs.core.name.call(null,k)),value);
+var G__34906 = elem;
+G__34906.setAttribute(app.utils.__GT_camel_case.call(null,cljs.core.name.call(null,k)),value);
 &nbsp;
-return G__8508;
+return G__34906;
 });
-app.css.load = (function app$css$load(k,garden_css){
-var base64 = app.utils.__GT_base64.call(null,garden.core.css.call(null,garden_css));
+app.css.load = (function app$css$load(var_args){
+var args__25990__auto__ = [];
+var len__25983__auto___34909 = arguments.length;
+var i__25984__auto___34910 = (0);
+while(true){
+if((i__25984__auto___34910 &lt; len__25983__auto___34909)){
+args__25990__auto__.push((arguments[i__25984__auto___34910]));
+&nbsp;
+var G__34911 = (i__25984__auto___34910 + (1));
+i__25984__auto___34910 = G__34911;
+continue;
+} else {
+}
+break;
+}
+&nbsp;
+var argseq__25991__auto__ = ((((1) &lt; args__25990__auto__.length))?(new cljs.core.IndexedSeq(args__25990__auto__.slice((1)),(0),null)):<span class="branch-1 cbranch-no" title="branch not covered" >null)</span>;
+return app.css.load.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__25991__auto__);
+});
+&nbsp;
+app.css.load.cljs$core$IFn$_invoke$arity$variadic = (function (k,garden_css){
+var base64 = app.utils.__GT_base64.call(null,cljs.core.apply.call(null,garden.core.css,garden_css));
 var href = [cljs.core.str("data:text/css;base64,"),cljs.core.str(base64)].join('');
 var head = cljs.core.first.call(null,app.css.by_name.call(null,"head"));
 var link = app.css.attr.call(null,app.css.attr.call(null,app.css.attr.call(null,app.css.elem.call(null,"link"),new cljs.core.Keyword(null,"type","type",1174270348),"text/css"),new cljs.core.Keyword(null,"rel","rel",1378823488),"stylesheet"),new cljs.core.Keyword(null,"href","href",-793805698),href);
-var temp__4657__auto___8509 = k.call(null,cljs.core.deref.call(null,app.css.elements));
-if(cljs.core.truth_(temp__4657__auto___8509)){
-var old_link_8510 = temp__4657__auto___8509;
-head.removeChild(old_link_8510);
+var temp__4657__auto___34912 = k.call(null,cljs.core.deref.call(null,app.css.elements));
+if(cljs.core.truth_(temp__4657__auto___34912)){
+var old_link_34913 = temp__4657__auto___34912;
+head.removeChild(old_link_34913);
 } else {
 }
 &nbsp;
@@ -157,13 +235,22 @@ cljs.core.swap_BANG_.call(null,app.css.elements,cljs.core.assoc,k,link);
 return head.appendChild(link);
 });
 &nbsp;
-//# sourceMappingURL=css.js.map</pre></td></tr>
+app.css.load.cljs$lang$maxFixedArity = (1);
+&nbsp;
+app.css.load.cljs$lang$applyTo = (<span class="fstat-no" title="function not covered" >function (seq34907){</span>
+<span class="cstat-no" title="statement not covered" >var G__34908 = cljs.core.first.call(null,seq34907);</span>
+<span class="cstat-no" title="statement not covered" >var seq34907__$1 = cljs.core.next.call(null,seq34907);</span>
+<span class="cstat-no" title="statement not covered" >return app.css.load.cljs$core$IFn$_invoke$arity$variadic(G__34908,seq34907__$1);</span>
+});
+&nbsp;
+&nbsp;
+//# sourceMappingURL=css.js.map?rel=1485128388899</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jan 22 2017 22:22:54 GMT+0000 (GMT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jan 23 2017 23:48:17 GMT+0000 (GMT)
 </div>
 </div>
 <script src="../prettify.js"></script>
