@@ -1,14 +1,15 @@
 (defproject reagent-covered "1.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.293"]
+                 [org.clojure/clojurescript "1.9.946"]
                  [reagent "0.6.0"]
+                 [cljs-ajax "0.7.2"]
                  [clj-di "0.5.0"]
                  [garden "1.3.2"]
                  [me.raynes/fs "1.4.6"]
                  [cljsjs/codemirror "5.21.0-2"]
                  ]
   :plugins [[lein-cljsbuild "1.1.5"]
-            [lein-doo "0.1.7"]
+            [lein-doo "0.1.8"]
             [katlex/github-cdn "0.1.4"]
             ]
   :github-cdn {:dir "dist"
@@ -30,7 +31,7 @@
                                        :output-dir "prod"
                                        :optimizations :simple
                                        }}
-                        {:id           "dev"
+                       {:id           "dev"
                         :source-paths ["src"]
                         :figwheel     true
                         :compiler     {:main bootstrap.main
@@ -46,9 +47,9 @@
                                      :optimizations :none
                                      :pretty-print true
                                      }}]}
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.8"]
-                                  [com.cemerick/piggieback "0.2.1"]]
+  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.14"]
+                                  [com.cemerick/piggieback "0.2.2"]]
                    :figwheel { :nrepl-port 7888 }
                    :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-                   :plugins [[lein-figwheel "0.5.8"]]
+                   :plugins [[lein-figwheel "0.5.14"]]
                    }})

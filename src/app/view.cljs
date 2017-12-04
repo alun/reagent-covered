@@ -10,7 +10,7 @@
                   :margin 0
                   :font-family "monospace"
                   :background "url(http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=36&opacity=15)"
-                  }]
+                  :font-size :20px}]
           [:html :body {:width "100%"
                         :height "100%"
                         }]
