@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.92% </span>
+        <span class="strong">96.36% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>63/65</span>
+        <span class='fraction'>53/55</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>13/13</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.88% </span>
+        <span class="strong">96.3% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>62/64</span>
+        <span class='fraction'>52/54</span>
       </div>
     </div>
   </div>
@@ -144,40 +144,11 @@
 99
 100
 101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+102</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">10×</span>
-<span class="cline-any cline-yes">10×</span>
-<span class="cline-any cline-yes">10×</span>
-<span class="cline-any cline-yes">10×</span>
-<span class="cline-any cline-yes">24×</span>
-<span class="cline-any cline-yes">14×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14×</span>
-<span class="cline-any cline-yes">14×</span>
-<span class="cline-any cline-yes">14×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10×</span>
 <span class="cline-any cline-yes">10×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -273,28 +244,14 @@
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Compiled by ClojureScript 1.9.293 {}
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Compiled by ClojureScript 1.9.946 {}
 goog.provide('app.utils');
 goog.require('cljs.core');
 goog.require('goog.crypt.base64');
 app.utils.rand_num = (function app$utils$rand_num(var_args){
-var args37290 = [];
-var len__26117__auto___37293 = arguments.length;
-var i__26118__auto___37294 = (0);
-while(true){
-if((i__26118__auto___37294 &lt; len__26117__auto___37293)){
-args37290.push((arguments[i__26118__auto___37294]));
-&nbsp;
-var G__37295 = (i__26118__auto___37294 + (1));
-i__26118__auto___37294 = G__37295;
-continue;
-} else {
-}
-break;
-}
-&nbsp;
-var G__37292 = args37290.length;
-switch (G__37292) {
+var G__14193 = arguments.length;
+switch (G__14193) {
 case 2:
 return app.utils.rand_num.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 &nbsp;
@@ -304,7 +261,7 @@ return app.utils.rand_num.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 &nbsp;
 <span class="cstat-no" title="statement not covered" >break;</span>
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args37290.length)].join('')));
+throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(arguments.length)].join('')));
 &nbsp;
 }
 });
@@ -312,7 +269,7 @@ throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args37290.lengt
 app.utils.rand_num.cljs$core$IFn$_invoke$arity$2 = (function (amp,suff){
 var v = Math.trunc((amp * Math.random()));
 if(cljs.core.truth_(suff)){
-return [cljs.core.str(v),cljs.core.str(suff)].join('');
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1(v),cljs.core.str.cljs$core$IFn$_invoke$arity$1(suff)].join('');
 } else {
 return v;
 }
@@ -326,9 +283,9 @@ app.utils.rand_num.cljs$lang$maxFixedArity = 2;
 &nbsp;
 app.utils.create_lazy_container = (function app$utils$create_lazy_container(id){
 var body = document.body;
-var div = (function (){var or__25009__auto__ = document.getElementById(id);
-if(cljs.core.truth_(or__25009__auto__)){
-return or__25009__auto__;
+var div = (function (){var or__7683__auto__ = document.getElementById(id);
+if(cljs.core.truth_(or__7683__auto__)){
+return or__7683__auto__;
 } else {
 return body.appendChild(document.createElement("div"));
 }
@@ -338,29 +295,29 @@ div.id = id;
 return div;
 });
 app.utils.color = (function app$utils$color(r,g,b){
-return [cljs.core.str("rgb("),cljs.core.str(r),cljs.core.str(","),cljs.core.str(g),cljs.core.str(","),cljs.core.str(b),cljs.core.str(")")].join('');
+return ["rgb(",cljs.core.str.cljs$core$IFn$_invoke$arity$1(r),",",cljs.core.str.cljs$core$IFn$_invoke$arity$1(g),",",cljs.core.str.cljs$core$IFn$_invoke$arity$1(b),")"].join('');
 });
 app.utils.random_color = (function app$utils$random_color(){
 return app.utils.color.call(null,app.utils.rand_num.call(null,(255)),app.utils.rand_num.call(null,(255)),app.utils.rand_num.call(null,(255)));
 });
 app.utils.log = (function app$utils$log(var_args){
-var args__26124__auto__ = [];
-var len__26117__auto___37298 = arguments.length;
-var i__26118__auto___37299 = (0);
+var args__8861__auto__ = [];
+var len__8854__auto___14196 = arguments.length;
+var i__8855__auto___14197 = (0);
 while(true){
-if((i__26118__auto___37299 &lt; len__26117__auto___37298)){
-args__26124__auto__.push((arguments[i__26118__auto___37299]));
+if((i__8855__auto___14197 &lt; len__8854__auto___14196)){
+args__8861__auto__.push((arguments[i__8855__auto___14197]));
 &nbsp;
-var G__37300 = (i__26118__auto___37299 + (1));
-i__26118__auto___37299 = G__37300;
+var G__14198 = (i__8855__auto___14197 + (1));
+i__8855__auto___14197 = G__14198;
 continue;
 } else {
 }
 break;
 }
 &nbsp;
-var argseq__26125__auto__ = ((((0) &lt; args__26124__auto__.length))?(new cljs.core.IndexedSeq(args__26124__auto__.slice((0)),(0),null)):null);
-return app.utils.log.cljs$core$IFn$_invoke$arity$variadic(argseq__26125__auto__);
+var argseq__8862__auto__ = ((((0) &lt; args__8861__auto__.length))?(new cljs.core.IndexedSeq(args__8861__auto__.slice((0)),(0),null)):null);
+return app.utils.log.cljs$core$IFn$_invoke$arity$variadic(argseq__8862__auto__);
 });
 &nbsp;
 app.utils.log.cljs$core$IFn$_invoke$arity$variadic = (function (args){
@@ -369,16 +326,16 @@ return console.log.apply(console,cljs.core.clj__GT_js.call(null,args));
 &nbsp;
 app.utils.log.cljs$lang$maxFixedArity = (0);
 &nbsp;
-app.utils.log.cljs$lang$applyTo = (function (seq37297){
-return app.utils.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq37297));
+app.utils.log.cljs$lang$applyTo = (function (seq14195){
+return app.utils.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq14195));
 });
 &nbsp;
 /**
  * Converts kebab case to camel case
  */
 app.utils.__GT_camel_case = (function app$utils$__GT_camel_case(v){
-return clojure.string.replace.call(null,v,/-(\w)/,(function (p1__37301_SHARP_){
-return clojure.string.upper_case.call(null,cljs.core.second.call(null,p1__37301_SHARP_));
+return clojure.string.replace.call(null,v,/-(\w)/,(function (p1__14199_SHARP_){
+return clojure.string.upper_case.call(null,cljs.core.second.call(null,p1__14199_SHARP_));
 }));
 });
 /**
@@ -388,13 +345,14 @@ app.utils.__GT_base64 = (function app$utils$__GT_base64(value){
 return goog.crypt.base64.encodeString(value);
 });
 &nbsp;
-//# sourceMappingURL=utils.js.map?rel=1508183188057</pre></td></tr>
+//# sourceMappingURL=utils.js.map
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Oct 16 2017 22:03:08 GMT+0100 (IST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Oct 21 2018 15:29:59 GMT+0100 (IST)
 </div>
 </div>
 <script src="../prettify.js"></script>

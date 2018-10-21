@@ -110,7 +110,8 @@
 65
 66
 67
-68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+68
+69</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -177,7 +178,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Compiled by ClojureScript 1.9.293 {}
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Compiled by ClojureScript 1.9.946 {}
 goog.provide('app.css');
 goog.require('cljs.core');
 goog.require('app.utils');
@@ -193,40 +195,40 @@ app.css.by_name = (function app$css$by_name(name){
 return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,Array.from(document.getElementsByTagName(name)));
 });
 app.css.attr = (function app$css$attr(elem,k,value){
-var G__38506 = elem;
-G__38506.setAttribute(app.utils.__GT_camel_case.call(null,cljs.core.name.call(null,k)),value);
+var G__15265 = elem;
+G__15265.setAttribute(app.utils.__GT_camel_case.call(null,cljs.core.name.call(null,k)),value);
 &nbsp;
-return G__38506;
+return G__15265;
 });
 app.css.load = (function app$css$load(var_args){
-var args__26124__auto__ = [];
-var len__26117__auto___38509 = arguments.length;
-var i__26118__auto___38510 = (0);
+var args__8861__auto__ = [];
+var len__8854__auto___15268 = arguments.length;
+var i__8855__auto___15269 = (0);
 while(true){
-if((i__26118__auto___38510 &lt; len__26117__auto___38509)){
-args__26124__auto__.push((arguments[i__26118__auto___38510]));
+if((i__8855__auto___15269 &lt; len__8854__auto___15268)){
+args__8861__auto__.push((arguments[i__8855__auto___15269]));
 &nbsp;
-var G__38511 = (i__26118__auto___38510 + (1));
-i__26118__auto___38510 = G__38511;
+var G__15270 = (i__8855__auto___15269 + (1));
+i__8855__auto___15269 = G__15270;
 continue;
 } else {
 }
 break;
 }
 &nbsp;
-var argseq__26125__auto__ = ((((1) &lt; args__26124__auto__.length))?(new cljs.core.IndexedSeq(args__26124__auto__.slice((1)),(0),null)):<span class="branch-1 cbranch-no" title="branch not covered" >null)</span>;
-return app.css.load.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__26125__auto__);
+var argseq__8862__auto__ = ((((1) &lt; args__8861__auto__.length))?(new cljs.core.IndexedSeq(args__8861__auto__.slice((1)),(0),null)):<span class="branch-1 cbranch-no" title="branch not covered" >null)</span>;
+return app.css.load.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__8862__auto__);
 });
 &nbsp;
 app.css.load.cljs$core$IFn$_invoke$arity$variadic = (function (k,garden_css){
 var base64 = app.utils.__GT_base64.call(null,cljs.core.apply.call(null,garden.core.css,garden_css));
-var href = [cljs.core.str("data:text/css;base64,"),cljs.core.str(base64)].join('');
+var href = ["data:text/css;base64,",cljs.core.str.cljs$core$IFn$_invoke$arity$1(base64)].join('');
 var parent = cljs.core.first.call(null,app.css.by_name.call(null,"body"));
 var link = app.css.attr.call(null,app.css.attr.call(null,app.css.attr.call(null,app.css.elem.call(null,"link"),new cljs.core.Keyword(null,"type","type",1174270348),"text/css"),new cljs.core.Keyword(null,"rel","rel",1378823488),"stylesheet"),new cljs.core.Keyword(null,"href","href",-793805698),href);
-var temp__4657__auto___38512 = k.call(null,cljs.core.deref.call(null,app.css.elements));
-if(cljs.core.truth_(temp__4657__auto___38512)){
-var old_link_38513 = temp__4657__auto___38512;
-parent.removeChild(old_link_38513);
+var temp__4657__auto___15271 = k.call(null,cljs.core.deref.call(null,app.css.elements));
+if(cljs.core.truth_(temp__4657__auto___15271)){
+var old_link_15272 = temp__4657__auto___15271;
+parent.removeChild(old_link_15272);
 } else {
 }
 &nbsp;
@@ -237,20 +239,21 @@ return parent.appendChild(link);
 &nbsp;
 app.css.load.cljs$lang$maxFixedArity = (1);
 &nbsp;
-app.css.load.cljs$lang$applyTo = (<span class="fstat-no" title="function not covered" >function (seq38507){</span>
-<span class="cstat-no" title="statement not covered" >var G__38508 = cljs.core.first.call(null,seq38507);</span>
-<span class="cstat-no" title="statement not covered" >var seq38507__$1 = cljs.core.next.call(null,seq38507);</span>
-<span class="cstat-no" title="statement not covered" >return app.css.load.cljs$core$IFn$_invoke$arity$variadic(G__38508,seq38507__$1);</span>
+app.css.load.cljs$lang$applyTo = (<span class="fstat-no" title="function not covered" >function (seq15266){</span>
+<span class="cstat-no" title="statement not covered" >var G__15267 = cljs.core.first.call(null,seq15266);</span>
+<span class="cstat-no" title="statement not covered" >var seq15266__$1 = cljs.core.next.call(null,seq15266);</span>
+<span class="cstat-no" title="statement not covered" >return app.css.load.cljs$core$IFn$_invoke$arity$variadic(G__15267,seq15266__$1);</span>
 });
 &nbsp;
 &nbsp;
-//# sourceMappingURL=css.js.map?rel=1508183189746</pre></td></tr>
+//# sourceMappingURL=css.js.map
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Oct 16 2017 22:03:08 GMT+0100 (IST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Oct 21 2018 15:29:59 GMT+0100 (IST)
 </div>
 </div>
 <script src="../prettify.js"></script>
