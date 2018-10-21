@@ -9,7 +9,7 @@
                  [cljsjs/codemirror "5.21.0-2"]
                  ]
   :plugins [[lein-cljsbuild "1.1.5"]
-            [lein-doo "0.1.8"]
+            [lein-doo "0.1.10"]
             [katlex/github-cdn "0.1.4"]
             ]
   :github-cdn {:dir "dist"
@@ -21,9 +21,9 @@
         :build "test"
         :paths {:karma "./node_modules/.bin/karma --port 9881 --no-colors"}
         :alias {:default [:chrome]}
-        :coverage {:packages ['app]
-                   :reporter {:check {:global {:statements 95}
-                                      :each {:statements 95}}}}}
+        :coverage {:packages [app]
+                   :reporter {:check {:global {:statements 80}
+                                      :each {:statements 60}}}}}
   :cljsbuild {:builds [{:id           "prod"
                         :source-paths ["src"]
                         :compiler     {:main bootstrap.main

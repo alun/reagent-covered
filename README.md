@@ -17,7 +17,7 @@ The project needs [leiningen][Lein] and [npm][Npm] installed. Python or any tool
 
 ### Installation
 
-    npm install
+    npm i
 
 ### Run rebuild/test cycle
 
